@@ -11,10 +11,10 @@ USER_HOME = os.path.expanduser("~")
 class BibliaBuscaApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        ui_path = os.path.join(USER_HOME, "Projetos", "biblia", "search.ui")
+        ui_path = os.path.join(USER_HOME, ".biblia-offline", "search.ui")
         uic.loadUi(ui_path, self)  # Carrega o arquivo .ui diretamente
         self.setWindowTitle("Chave Bíblica")
-        self.setWindowIcon(QIcon(f"{USER_HOME}/Projetos/biblia/biblia.png"))
+        self.setWindowIcon(QIcon(f"{USER_HOME}/.biblia-offline/biblia.png"))
         self.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
         QApplication.setApplicationVersion("1.0")
 
