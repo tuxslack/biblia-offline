@@ -64,11 +64,11 @@ class MainUi(QMainWindow):
     def __init__(self):
         super(MainUi, self).__init__()
 
-        ui_path = os.path.join(USER_HOME, "Projetos", "biblia", "biblia.ui")
+        ui_path = os.path.join(USER_HOME, ".biblia-offline", "biblia.ui")
         loadUi(ui_path, self)
         
         self.setWindowTitle("Bíblia Sagrada")
-        self.setWindowIcon(QIcon(f"{USER_HOME}/Projetos/biblia/gnome-books.svg"))
+        self.setWindowIcon(QIcon(f"{USER_HOME}.biblia-offline/gnome-books.svg"))
         self.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
         QApplication.setApplicationVersion("1.0")
      
