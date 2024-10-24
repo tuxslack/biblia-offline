@@ -11,7 +11,7 @@
 # --------------------------------------------------------------
 
 # URL do repositório Git
-REPO_URL="https://github.com/SobDex/biblia-offline"
+REPO_URL="https://github.com/SobDex/biblia-offline.git"
 
 # Função de instalação
 install() {
