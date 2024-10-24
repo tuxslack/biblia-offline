@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 # --------------------------------------------------------------
-# Projeto	:
-# Arquivo	:
-# Descrição :
-# Versão	:
+# Projeto	: Bíblia Offline
+# Arquivo	: install.sh
+# Descrição : Script de instalação para a Bíblia Offline
+# Versão	: 1.0
 # Data		: $(date '+%d/%m/%Y - %R')
 # Autor		: Sob Dex
-# --------------------------------------------------------------
-# Uso:
 # --------------------------------------------------------------
 
 # URL do repositório Git
@@ -19,7 +17,7 @@ install() {
 
     # Criar diretório oculto na home do usuário
     INSTALL_DIR="$HOME/.biblia-offline"
-    mkdir -p $INSTALL_DIR
+    mkdir -p "$INSTALL_DIR"
 
     # Clonar o repositório se o diretório não existir
     if [ ! -d "$INSTALL_DIR" ]; then
@@ -28,26 +26,27 @@ install() {
     fi
 
     # Ir para o diretório de instalação
-    cd $INSTALL_DIR || { echo "Erro ao acessar o diretório de instalação."; exit 1; }
+    cd "$INSTALL_DIR" || { echo "Erro ao acessar o diretório de instalação."; exit 1; }
 
-    # Baixar o arquivo livros.zip se não estiver presente
-    if [ ! -f "livros.zip" ]; then
-        echo "Baixando o arquivo de livros..."
-        curl -L -o "livros.zip" "URL_DO_ARQUIVO_DE_LIVROS" || { echo "Erro ao baixar o arquivo de livros."; exit 1; }
-    fi
+    # Verificar se o arquivo livros.zip existe no diretório
+    if [ -f "livros.zip" ]; then
+        echo "Arquivo livros.zip encontrado. Descompactando os livros..."
+        
+        # Verificar se o unzip está instalado
+        if command -v unzip &> /dev/null; then
+            unzip -o livros.zip -d "$INSTALL_DIR/livros"
+        else
+            echo "unzip não instalado. Instalando unzip..."
+            sudo apt install unzip -y || { echo "Erro ao instalar unzip."; exit 1; }
+            unzip -o livros.zip -d "$INSTALL_DIR/livros"
+        fi
 
-    # Descompactar o arquivo livros.zip
-    echo "Descompactando os livros..."
-    if command -v unzip &> /dev/null; then
-        unzip -o livros.zip -d "$INSTALL_DIR/livros"
+        # Remover o arquivo compactado
+        rm livros.zip
     else
-        echo "unzip não instalado. Instalando unzip..."
-        sudo apt install unzip -y || { echo "Erro ao instalar unzip."; exit 1; }
-        unzip -o livros.zip -d "$INSTALL_DIR/livros"
+        echo "Erro: O arquivo livros.zip não foi encontrado no repositório."
+        exit 1
     fi
-
-    # Remover o arquivo compactado
-    rm livros.zip
 
     # Criar o ambiente virtual
     echo "Criando ambiente virtual..."
@@ -103,4 +102,3 @@ menu() {
 
 # Executar menu
 menu
-
