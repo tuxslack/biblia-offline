@@ -20,7 +20,7 @@ install() {
     mkdir -p "$INSTALL_DIR"
 
     # Clonar o repositório se o diretório não existir
-    if [ ! -d "$INSTALL_DIR" ]; then
+    if [ ! -d "$INSTALL_DIR/.git" ]; then
         echo "Clonando o repositório..."
         git clone "$REPO_URL" "$INSTALL_DIR" || { echo "Erro ao clonar o repositório."; exit 1; }
     fi
@@ -29,6 +29,7 @@ install() {
     cd "$INSTALL_DIR" || { echo "Erro ao acessar o diretório de instalação."; exit 1; }
 
     # Verificar se o arquivo livros.zip existe no diretório
+    echo "Verificando se livros.zip existe..."
     if [ -f "livros.zip" ]; then
         echo "Arquivo livros.zip encontrado. Descompactando os livros..."
         
