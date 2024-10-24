@@ -11,14 +11,14 @@ USER_HOME = os.path.expanduser("~")
 class MainUi(QMainWindow):
     def __init__(self):
         super(MainUi, self).__init__()
-        ui_path = os.path.join(USER_HOME, "Projetos", "biblia", "notes.ui")
+        ui_path = os.path.join(USER_HOME, ".biblia-offline", "notes.ui")
         loadUi(ui_path, self)
 
         # Carregar o último livro e capítulo
         self.setWindowTitle("Anotações Bíblicas")
         self.load_last_book_and_chapter()
         self.setWindowTitle("Anotações Bíblicas")
-        self.setWindowIcon(QIcon(f'{USER_HOME}/Projetos/biblia/gnome-books.svg'))
+        self.setWindowIcon(QIcon(f'{USER_HOME}/.biblia-offline/gnome-books.svg'))
         self.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
         
         # Conectar o botão de salvar à função save_notes
@@ -47,7 +47,7 @@ class MainUi(QMainWindow):
     def load_last_book_and_chapter(self):
         # Lê o arquivo ultimo_livro.json
         try:
-            with open(f"{USER_HOME}/Projetos/biblia/ultimo_livro.json", "r") as file:
+            with open(f"{USER_HOME}/.biblia-offline/ultimo_livro.json", "r") as file:
                 data = json.load(file)
                 livro = data.get("livro")
                 capitulo = data.get("capitulo")
@@ -63,7 +63,7 @@ class MainUi(QMainWindow):
 
     def create_notes_file(self, livro, capitulo):
         # Define o caminho para o diretório de notas
-        directory = f"{USER_HOME}/Projetos/biblia/notas/{livro}"
+        directory = f"{USER_HOME}/.biblia-offline/notas/{livro}"
         file_path = f"{directory}/{capitulo}.txt"
 
         # Cria o diretório se não existir
@@ -91,7 +91,7 @@ class MainUi(QMainWindow):
         # Salva as notas escritas no QTextEdit
         livro = self.name_book.text().lower()  # Usar a abreviatura do livro
         capitulo = self.number_book.text()
-        file_path = f"{USER_HOME}/Projetos/biblia/notas/{livro}/{capitulo}.txt"
+        file_path = f"{USER_HOME}/.biblia-offline/notas/{livro}/{capitulo}.txt"
 
         try:
             with open(file_path, "w") as f:
@@ -107,7 +107,7 @@ class MainUi(QMainWindow):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setApplicationName("Sagradas Escrituras - Notas")
-    app.setWindowIcon(QIcon(f"{USER_HOME}/Projetos/biblia/biblia.png"))
+    app.setWindowIcon(QIcon(f"{USER_HOME}/.biblia-offline/biblia.png"))
     ui = MainUi()
     ui.show()
     app.exec_()
