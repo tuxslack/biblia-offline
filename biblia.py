@@ -204,10 +204,10 @@ class MainUi(QMainWindow):
     
     
     def run_notes(self):
-        subprocess.Popen([f'{USER_HOME}/.scripts/venv/bin/python', f'{BASE_DIR}/notes.py'])
+        subprocess.Popen([f'{USER_HOME}/.biblia-offline/venv/bin/python', f'{BASE_DIR}/notes.py'])
     
     def run_cb(self):
-        subprocess.Popen([f'{USER_HOME}/.scripts/venv/bin/python', f'{BASE_DIR}/search.py'])
+        subprocess.Popen([f'{USER_HOME}/.biblia-offline/venv/bin/python', f'{BASE_DIR}/search.py'])
     
 
 
