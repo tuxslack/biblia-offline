@@ -6,8 +6,10 @@ A Bíblia Offline utiliza uma lógica baseada na manipulação de arquivos de te
 A Bíblia Offline é composta por três scripts Python:
 - `biblia.py` (modo leitura da Bíblia)
   Este é o programa principal, onde o utilizador tem acesso aos livros da Bíblia por meio dos menus "Antigo Testamento" e "Novo Testamento". Existe também o menu "Opções", através do qual é possível aceder a outros módulos, como "Anotações" e "Chave Bíblica".
+  
 - `notes.py` (anotações para cada capítulo da Bíblia)
   Quando o utilizador está a ler um capítulo da Bíblia e clica em "Opções" >> "Anotações", um editor de texto abre-se, permitindo que anotações sobre o capítulo em leitura sejam feitas. Ao clicar em salvar um arquivo de texto único é criado para aquele capítulo em leitura. Caso o usuário queira futuramente consultar as anotações, ele precisará acessar novamente o capítulo onde as mesmas foram salvas, então o arquivo anteriormente criado para aquele capítulo específico será carregado no editor de texto podendo mais uma vez ser editado.   
+
 - `search.py` (busca recursiva)
   Em qualquer momento o usuário pode clicar em "Opções" >> "Chave Bíblica" para procurar pela incidência de uma palavra em todos os capítulos da Bíblia.
 
