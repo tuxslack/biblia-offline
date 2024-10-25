@@ -18,7 +18,7 @@ class MainUi(QMainWindow):
         self.setWindowTitle("Anotações Bíblicas")
         self.load_last_book_and_chapter()
         self.setWindowTitle("Anotações Bíblicas")
-        self.setWindowIcon(QIcon(f'{USER_HOME}/.biblia-offline/gnome-books.svg'))
+        self.setWindowIcon(QIcon(f'{USER_HOME}/.biblia-offline/bible.svg'))
         self.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
         
         # Conectar o botão de salvar à função save_notes
