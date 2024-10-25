@@ -68,7 +68,7 @@ class MainUi(QMainWindow):
         loadUi(ui_path, self)
         
         self.setWindowTitle("Bíblia Sagrada")
-        self.setWindowIcon(QIcon(f"{USER_HOME}.biblia-offline/biblia.svg"))
+        self.setWindowIcon(QIcon(f"{USER_HOME}.biblia-offline/bible.svg"))
         self.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
         QApplication.setApplicationVersion("1.0")
      
