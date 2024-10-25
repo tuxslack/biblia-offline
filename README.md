@@ -5,7 +5,7 @@ A Bíblia Offline possui o modo leitura, anotações e busca de palavras.
 
 Para executar este programa em um sistema Linux, você precisará das seguintes dependências:
 
-1. **Pacote para Ambiente Virtual**: O pacote `python3-venv` deve estar instalado para que o programa possa criar um ambiente virtual. Para instalar o pacote, use o seguinte comando:
+1. **Pacote para Ambiente Virtual**: O pacote `python3-venv` deve estar instalado para que o programa possa criar um ambiente virtual. O uso do ambiente virtual isola a aplicação **Bíblia Offline** do restante do sistema, garantindo que as dependências e arquivos da aplicação não interfiram com os arquivos da raiz do sistema. Para instalar o pacote, use o seguinte comando:
 
    - No Ubuntu ou Debian:
      ```bash
