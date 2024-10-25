@@ -25,7 +25,7 @@ Para executar este programa em um sistema Linux, você precisará das seguintes 
 ```
 curl -sSL https://raw.githubusercontent.com/SobDex/biblia-offline/refs/heads/main/install.sh -o install.sh
 ```
-Obs: o script de instalação será baixado no diretório atual
+Obs: o script de instalação será baixado no diretório atual.
 
 2. Após baixar o arquivo install.sh, dê permissão de execução para o mesmo:
 ```
@@ -36,8 +36,8 @@ chmod +x install.sh
 ```
 ./install.sh
 ```
-
-A instalação ocorrerá automaticamente. Quando a instalação estiver sido concluída, o aplicativo já deverá aparecer no lançador de aplicativos.
+O script de instalação possui 3 opções: instalar, desinstalar e sair.
+Ao escolher a opção `instalar`, a instalação ocorrerá automaticamente. Quando a instalação estiver sido concluída, o aplicativo já deverá aparecer no lançador de aplicativos.
 
 ## Onde os arquivos da Bíblia Offline são instalados?
 
