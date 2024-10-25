@@ -1,6 +1,7 @@
 # Bíblia Offline
 
 A Bíblia Offline possui o modo leitura, anotações e busca de palavras.
+![Screenshot do Projeto](https://github.com/SobDex/biblia-offline/raw/main/Screenshot1.png)
 ## Dependências
 
 Para executar este programa em um sistema Linux, você precisará das seguintes dependências:
