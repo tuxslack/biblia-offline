@@ -97,6 +97,7 @@ class BibliaBuscaApp(QMainWindow):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setApplicationName("Busca - Escrituras Sagradas")
+    app.setWindowIcon(QIcon(f"{USER_HOME}/.biblia-offline/biblia.png"))
     janela = BibliaBuscaApp()
     janela.show()
     sys.exit(app.exec_())
