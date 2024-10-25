@@ -363,7 +363,8 @@ class MainUi(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    app.setApplicationName("Sagradas Escrituras")
+    app.setApplicationName("Bíblia Sagrada")
+    app.setWindowIcon(QIcon(f"{USER_HOME}/.biblia-offline/biblia.png"))
     window = MainUi()
     window.show()
     sys.exit(app.exec_())
