@@ -19,7 +19,7 @@ capítulo em leitura. Caso o usuário queira futuramente consultar as anotaçõe
 
 - `search.py` (busca recursiva)
 
-Em qualquer momento o usuário pode clicar em "Opções" >> "Chave Bíblica" para procurar pela incidência de uma palavra em todos os capítulos da Bíblia.
+Em qualquer momento o usuário pode clicar em "Opções" >> "Chave Bíblica" para procurar pela incidência de uma palavra em todos os capítulos da Bíblia. Essa ferramenta pode ser usada para diversos objetivos e é indispensável para estudos Bíblicos.
 
 ## Dependências
 
