@@ -1,17 +1,17 @@
 # Bíblia Offline
 A Bíblia Offline utiliza uma lógica baseada na manipulação de arquivos de texto. Cada livro da Bíblia é representado por um diretório, e cada capítulo da Bíblia é um arquivo de texto único, facilitando assim a manipulação dos dados.
-
+Com essa etrutura de dados, foi possível fazer a implementação de sistemas de busca e anotações para que a aplicação fornecesse não apenas mais uma forma de leitura da Bíblia, mas também a possibilide ser usada diáriamente para estudo Bíblico.
 ![Screenshot do Projeto](https://github.com/SobDex/biblia-offline/raw/main/Screenshot1.png)
 ## Funcionamento
 A Bíblia Offline é composta por três scripts Python:
 - `biblia.py` (modo leitura da Bíblia)
-  Este é o programa principal, onde o utilizador tem acesso aos livros da Bíblia por meio dos menus "Antigo Testamento" e "Novo Testamento". Existe também o menu "Opções", através do qual é possível aceder a outros módulos, como "Anotações" e "Chave Bíblica".
+Este é o programa principal, onde o utilizador tem acesso aos livros da Bíblia por meio dos menus "Antigo Testamento" e "Novo Testamento". Existe também o menu "Opções", através do qual é possível aceder a outros módulos, como "Anotações" e "Chave Bíblica".
   
 - `notes.py` (anotações para cada capítulo da Bíblia)
-  Quando o utilizador está a ler um capítulo da Bíblia e clica em "Opções" >> "Anotações", um editor de texto abre-se, permitindo que anotações sobre o capítulo em leitura sejam feitas. Ao clicar em salvar um arquivo de texto único é criado para aquele capítulo em leitura. Caso o usuário queira futuramente consultar as anotações, ele precisará acessar novamente o capítulo onde as mesmas foram salvas, então o arquivo anteriormente criado para aquele capítulo específico será carregado no editor de texto podendo mais uma vez ser editado.   
+Quando o utilizador está a ler um capítulo da Bíblia e clica em "Opções" >> "Anotações", um editor de texto abre-se, permitindo que anotações sobre o capítulo em leitura sejam feitas. Ao clicar em salvar um arquivo de texto único é criado para aquele capítulo em leitura. Caso o usuário queira futuramente consultar as anotações, ele precisará acessar novamente o capítulo onde as mesmas foram salvas, então o arquivo anteriormente criado para aquele capítulo específico será carregado no editor de texto podendo mais uma vez ser editado.   
 
 - `search.py` (busca recursiva)
-  Em qualquer momento o usuário pode clicar em "Opções" >> "Chave Bíblica" para procurar pela incidência de uma palavra em todos os capítulos da Bíblia.
+Em qualquer momento o usuário pode clicar em "Opções" >> "Chave Bíblica" para procurar pela incidência de uma palavra em todos os capítulos da Bíblia.
 
 ## Dependências
 
