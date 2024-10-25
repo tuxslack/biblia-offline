@@ -13,7 +13,7 @@ Este é o programa principal, onde o utilizador tem acesso aos livros da Bíblia
   
 - `notes.py` (anotações para cada capítulo da Bíblia)
 
-Quando o utilizador está a ler um capítulo da Bíblia e clica em "Opções" >> "Anotações", um editor de texto abre-se, permitindo que anotações sobre o capítulo em leitura sejam feitas. Ao clicar em salvar um arquivo de texto único é criado para aquele
+Quando o utilizador está lendo um capítulo da Bíblia e clica em "Opções" >> "Anotações", um editor de texto abre-se, permitindo que anotações sobre o capítulo em leitura sejam feitas. Ao clicar em salvar um arquivo de texto único é criado para aquele
 capítulo em leitura. Caso o usuário queira futuramente consultar as anotações, ele precisará acessar novamente o capítulo onde as mesmas foram salvas, então o arquivo anteriormente criado para aquele capítulo específico será carregado no editor de texto podendo mais uma vez ser editado.   
 
 - `search.py` (busca recursiva)
