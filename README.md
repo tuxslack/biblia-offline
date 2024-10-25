@@ -3,6 +3,7 @@ A Bíblia Offline utiliza uma lógica baseada na manipulação de arquivos de te
 
 Com essa etrutura de dados, foi possível fazer a implementação de sistemas de busca e anotações para que a aplicação fornecesse não apenas mais uma forma de leitura da Bíblia, mas também a possibilide ser usada diáriamente para estudo Bíblico.
 
+A Tradução da Bíblia usada na programe é a Nova Versão Internacional (NVI), com excessão do livro de Apocalipse que está na versão Almeida Corrigida Fiel (ACF).
 ![Screenshot do Projeto](https://github.com/SobDex/biblia-offline/raw/main/Screenshot1.png)
 
 ## Funcionamento
