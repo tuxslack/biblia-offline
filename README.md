@@ -17,6 +17,7 @@ Para executar este programa em um sistema Linux, você precisará das seguintes 
    ```bash
    sudo apt install unzip
 
+3. **`curl`**: Necessário para fazer download do script de intalação e também para a clonagem do repositório.
 
 ## Instalação
 1. Para instalar a Bíblia Offline faça o download do script de instalação. Para isso, abra o terminal e use o comando:
