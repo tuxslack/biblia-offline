@@ -17,7 +17,7 @@ Para executar este programa em um sistema Linux, você precisará das seguintes 
    ```bash
    sudo apt install unzip
 
-3. **`curl`**: Necessário para fazer download do script de intalação e também para a clonagem do repositório.
+3. **`curl`**: Necessário para fazer download do script de instalação e também para a clonagem do repositório.
 
 ## Instalação
 1. Para instalar a Bíblia Offline faça o download do script de instalação. Para isso, abra o terminal e use o comando:
@@ -42,4 +42,4 @@ A instalação ocorrerá automaticamente. Quando a instalação estiver sido con
 
 A Bíblia Offline é instalada dentro do diretório `$HOME/.biblia-offline`. Além desse diretório é criado um arquivo `biblia-offline.desktop` em `$HOME/.local/share/applications`.
 
-Dentro do diretório `$HOME/.biblia-offline` será criado um ambiente virtual Python para instalar a biblioteca pyQt5. Dessa forma nenhuma biblioteca python será instalada no Python do seu sistema principal, deixando assim a isntalação e desisntalação da aplicação muito mais segura.
+Dentro do diretório `$HOME/.biblia-offline` será criado um ambiente virtual Python para instalar a biblioteca pyQt5. Dessa forma nenhuma biblioteca python será instalada no Python do seu sistema principal, deixando assim a instalação e desisntalação da aplicação muito mais segura.
