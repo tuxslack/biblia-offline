@@ -56,7 +56,7 @@ chmod +x install.sh
 ./install.sh
 ```
 O script de instalação possui 3 opções: instalar, desinstalar e sair.
-Ao escolher a opção `instalar`, a instalação ocorrerá automaticamente. Quando a instalação estiver sido concluída, o aplicativo já deverá aparecer no lançador de aplicativos.
+Ao escolher a opção `instalar`, a instalação ocorrerá automaticamente. Quando a instalação estiver sido concluída, o aplicativo já deverá aparecer no menu de aplicações do sistema.
 
 ## Onde os arquivos da Bíblia Offline são instalados?
 
