@@ -12,7 +12,7 @@ Para executar este programa em um sistema Linux, você precisará das seguintes 
      sudo apt install python3-venv
      ```
 
-2. **Pacote para Manipulação de Arquivos `.zip`**: Por padrão, recomenda-se o uso do pacote `unzip` (os livros da Bíblia Offline estão compactados), mas você pode usar qualquer programa ou pacote que lide com arquivos `.zip`. Para instalar o `unzip`, use:
+2. **`unzip`**: O programa usa do pacote `unzip` para descompactar os livros da Bíblia:
 
    ```bash
    sudo apt install unzip
