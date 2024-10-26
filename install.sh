@@ -16,7 +16,7 @@ install() {
     echo "Instalando a Bíblia Offline..."
 
     # Verificar se as dependências estão instaladas
-    for cmd in curl unzip; do
+    for cmd in git curl unzip; do
         if ! command -v "$cmd" &> /dev/null; then
             echo "Erro: o pacote $cmd não está instalado. Instale-o e tente novamente."
             exit 1
