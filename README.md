@@ -47,7 +47,7 @@ Para executar este programa em um sistema Linux, você precisará das seguintes 
 
 3. **`curl`**: Necessário para fazer download do script de instalação e também para a clonagem do repositório.
 
-4. **`git`**.
+4. **`git`**: Permite clonar repositório.
 
 ## Instalação
 1. Para instalar a Bíblia Offline faça o download do script de instalação. Para isso, abra o terminal e use o comando:
