@@ -58,8 +58,10 @@ chmod +x install.sh
 O script de instalação possui 3 opções: instalar, desinstalar e sair.
 Ao escolher a opção `instalar`, a instalação ocorrerá automaticamente. Quando a instalação estiver sido concluída, o aplicativo já deverá aparecer no menu de aplicações do sistema.
 
-## Onde os arquivos da Bíblia Offline são instalados?
+## Desinstalação: Onde ficam os arquivos da Bíblia Offline?
 
 A Bíblia Offline é instalada dentro do diretório `$HOME/.biblia-offline`. Além desse diretório é criado um arquivo `biblia-offline.desktop` em `$HOME/.local/share/applications`.
 
 Dentro do diretório `$HOME/.biblia-offline` será criado um ambiente virtual Python para instalar a biblioteca pyQt5. Dessa forma nenhuma biblioteca python será instalada no Python do seu sistema principal, deixando assim a instalação e desisntalação da aplicação muito mais segura.
+
+O script `install.sh` possui a opção para remover os arquivos da Bíblia Offline. Porém, se o usuário escolher excluir manualmente o diretório `$HOME/.biblia-offline` e o arquivo `$HOME/.local/share/applications/biblia-offline.desktop`, o efeito será o mesmo.
