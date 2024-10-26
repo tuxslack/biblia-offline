@@ -27,17 +27,27 @@ Para executar este programa em um sistema Linux, você precisará das seguintes 
 
 1. **Pacote para Ambiente Virtual**: O pacote `python3-venv` deve estar instalado para que o programa possa criar um ambiente virtual. O uso do ambiente virtual isola a aplicação **Bíblia Offline** do restante do sistema, garantindo que as dependências e arquivos da aplicação não interfiram com os arquivos da raiz do sistema. Para instalar o pacote, use o seguinte comando:
 
-   - No Ubuntu ou Debian:
+   - Distribuições baseadas no Debian:
      ```bash
      sudo apt install python3-venv
      ```
+  - Fedora/Red Hat:
+    ```bash
+    sudo dnf install python3-venv
+    ```
+  - openSUSE:
+    ```bash
+    sudo zypper install python3-venv
+    ```   
+  - Distribuições baseadas no Arch Linux:
+    O venv já vem incluso com o pacote Python no Arch Linux, então não é necessário instalar separadamente.
 
-2. **`unzip`**: O programa usa do pacote `unzip` para descompactar os livros da Bíblia:
+1. **`unzip`**: O programa usa do pacote `unzip` para descompactar os livros da Bíblia:
 
    ```bash
    sudo apt install unzip
 
-3. **`curl`**: Necessário para fazer download do script de instalação e também para a clonagem do repositório.
+2. **`curl`**: Necessário para fazer download do script de instalação e também para a clonagem do repositório.
 
 ## Instalação
 1. Para instalar a Bíblia Offline faça o download do script de instalação. Para isso, abra o terminal e use o comando:
