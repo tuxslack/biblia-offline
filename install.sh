@@ -76,7 +76,9 @@ Terminal=false" > "$DESKTOP_FILE"
     # Verificar se a instalação foi concluída
     echo "Checando instalação..."
     if [ -d "$INSTALL_DIR" ] && [ -f "$DESKTOP_FILE" ] && [ -f "$INSTALL_DIR/venv/bin/python" ]; then
-        echo "Instalação concluída! O programa pode ser encontrado no menu de aplicativos do sistema."
+        echo -e "\nInstalação concluída! O programa pode ser encontrado no menu de aplicativos do sistema."
+        echo "Para executar o programa através da linha de comando, use:"
+        echo "$INSTALL_DIR/venv/bin/python $INSTALL_DIR/biblia.py"
     else
         echo "Erro: A instalação não foi concluída corretamente."
         echo "Execute o script de instalação novamente e escolha a opção Desinstalar"
