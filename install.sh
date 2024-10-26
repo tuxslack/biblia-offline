@@ -16,8 +16,8 @@ install() {
     echo "Instalando a Bíblia Offline..."
 
     # Verificar se as dependências estão instaladas
-    for cmd in curl unzip python3; do
-        if ! command --version "$cmd" &> /dev/null; then
+    for cmd in curl unzip; do
+        if ! command -v "$cmd" &> /dev/null; then
             echo "Erro: o pacote $cmd não está instalado. Instale-o e tente novamente."
             exit 1
         fi
