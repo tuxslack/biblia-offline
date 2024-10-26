@@ -23,11 +23,17 @@ install() {
         fi
     done
 
-# Verificar se o módulo venv do Python está instalado
-if [ ! -d "/usr/share/doc/python3-venv" ]; then
+# Verificar se o módulo venv está disponível executando python3 -m venv em um diretório temporário
+TEMP_DIR=$(mktemp -d)
+if ! python3 -m venv "$TEMP_DIR" 2>/dev/null; then
     echo "Erro: O módulo venv do Python não está disponível. Instale-o e tente novamente."
+    rm -rf "$TEMP_DIR"  # Remover o diretório temporário antes de sair
     exit 1
 fi
+
+# Limpeza do diretório temporário
+rm -rf "$TEMP_DIR"
+echo "O módulo venv está disponível. Continuando com a instalação..."
 
     # Criar diretório oculto na home do usuário
     INSTALL_DIR="$HOME/.biblia-offline"
