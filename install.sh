@@ -3,8 +3,8 @@
 # Projeto	: Bíblia Offline
 # Arquivo	: install.sh
 # Descrição : Script de instalação para a Bíblia Offline
-# Versão	: 1.0
-# Data		: $(date '+%d/%m/%Y - %R')
+# Versão	: 1.1
+# Data		: 25 de outrubro de 2024
 # Autor		: Sob Dex
 # --------------------------------------------------------------
 
