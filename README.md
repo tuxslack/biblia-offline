@@ -62,7 +62,7 @@ Obs: o script de instalação será baixado no diretório atual.
 chmod +x install.sh
 ```
 
--3 Execute o script
+3. Execute o script
 ```
 ./install.sh
 ```
