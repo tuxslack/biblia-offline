@@ -15,6 +15,20 @@ REPO_URL="https://github.com/SobDex/biblia-offline.git"
 install() {
     echo "Instalando a Bíblia Offline..."
 
+    # Verificar se as dependências estão instaladas
+    for cmd in curl unzip python3; do
+        if ! command --version "$cmd" &> /dev/null; then
+            echo "Erro: o pacote $cmd não está instalado. Instale-o e tente novamente."
+            exit 1
+        fi
+    done
+
+    # Verificar se venv está disponível
+    if ! python3 -m venv --help &> /dev/null; then
+        echo "Erro: O módulo venv do Python não está disponível. Instale-o e tente novamente."
+        exit 1
+    fi
+
     # Criar diretório oculto na home do usuário
     INSTALL_DIR="$HOME/.biblia-offline"
     mkdir -p "$INSTALL_DIR"
@@ -32,15 +46,7 @@ install() {
     echo "Verificando se livros.zip existe..."
     if [ -f "livros.zip" ]; then
         echo "Arquivo livros.zip encontrado. Descompactando os livros..."
-        
-        # Verificar se o unzip está instalado
-        if command -v unzip &> /dev/null; then
-            unzip -o livros.zip -d "$INSTALL_DIR/livros"
-        else
-            echo "unzip não instalado. Instalando unzip..."
-            sudo apt install unzip -y || { echo "Erro ao instalar unzip."; exit 1; }
-            unzip -o livros.zip -d "$INSTALL_DIR/livros"
-        fi
+        unzip -o livros.zip -d "$INSTALL_DIR/livros"
 
         # Remover o arquivo compactado
         rm livros.zip
@@ -65,23 +71,40 @@ Name=Bíblia Offline
 Exec=$INSTALL_DIR/venv/bin/python $INSTALL_DIR/biblia.py
 Icon=$INSTALL_DIR/bible.png
 Type=Application
-Terminal=false" > $DESKTOP_FILE
+Terminal=false" > "$DESKTOP_FILE"
 
-    # Tornar o .desktop executável
-    chmod +x $DESKTOP_FILE
-
-    echo "Instalação concluída! Use o atalho para executar o programa."
+    # Verificar se a instalação foi concluída
+    echo "Checando instalação..."
+    if [ -d "$INSTALL_DIR" ] && [ -f "$DESKTOP_FILE" ] && [ -f "$INSTALL_DIR/venv/bin/python" ]; then
+        echo "Instalação concluída! O programa pode ser encontrado no menu de aplicativos do sistema."
+    else
+        echo "Erro: A instalação não foi concluída corretamente."
+        echo "Execute o script de instalação novamente e escolha a opção Desinstalar"
+        echo "Ou, se preferir, remova o diretório $HOME/.biblia-offline e o arquivo $HOME/.local/share/applications/biblia-offline.desktop"
+        
+        exit 1
+    fi
 }
 
 # Função de desinstalação
 uninstall() {
-    echo "Desinstalando a Bíblia Offline..."
+    echo "Checando a instalação da Bíblia Offline..."
 
-    # Remover o diretório de instalação
-    rm -rf "$HOME/.biblia-offline"
+    # Remover o diretório de instalação, se existir
+    if [ -d "$HOME/.biblia-offline" ]; then
+        echo "Removendo diretório $HOME/.biblia-offline..."
+        rm -rf "$HOME/.biblia-offline"
+    else
+        echo "O diretório $HOME/.biblia-offline não foi encontrado."
+    fi
 
-    # Remover o arquivo .desktop
-    rm "$HOME/.local/share/applications/biblia-offline.desktop"
+    # Remover o arquivo .desktop, se existir
+    if [ -f "$HOME/.local/share/applications/biblia-offline.desktop" ]; then
+        echo "Removendo o arquivo .desktop $HOME/.local/share/applications/biblia-offline.desktop..."
+        rm "$HOME/.local/share/applications/biblia-offline.desktop"
+    else
+        echo "O arquivo .desktop não foi encontrado."
+    fi
 
     echo "Desinstalação concluída!"
 }
