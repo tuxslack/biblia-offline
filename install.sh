@@ -69,6 +69,12 @@ echo "O módulo venv está disponível. Continuando com a instalação..."
     echo "Instalando dependências do Python..."
     "$INSTALL_DIR/venv/bin/pip" install -r requirements.txt || { echo "Erro ao instalar dependências."; exit 1; }
 
+    # Verificar se o diretório $HOME/.local/share/applications existe, se não, criar e avisar o usuário
+    if [ ! -d "$HOME/.local/share/applications" ]; then
+        echo "O diretório $HOME/.local/share/applications não existe. Criando agora..."
+        mkdir -p "$HOME/.local/share/applications"
+    fi
+
     # Criar arquivo .desktop para o programa
     echo "Criando atalho no menu..."
     DESKTOP_FILE="$HOME/.local/share/applications/biblia-offline.desktop"
