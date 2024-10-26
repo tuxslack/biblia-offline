@@ -83,7 +83,8 @@ Name=Bíblia Offline
 Exec=$INSTALL_DIR/venv/bin/python $INSTALL_DIR/biblia.py
 Icon=$INSTALL_DIR/bible.png
 Type=Application
-Terminal=false" > "$DESKTOP_FILE"
+Terminal=false
+Categories=Utility;" > "$DESKTOP_FILE"
 
     # Verificar se a instalação foi concluída
     echo "Checando instalação..."
