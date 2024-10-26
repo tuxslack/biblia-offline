@@ -76,7 +76,7 @@ Terminal=false" > "$DESKTOP_FILE"
     # Verificar se a instalação foi concluída
     echo "Checando instalação..."
     if [ -d "$INSTALL_DIR" ] && [ -f "$DESKTOP_FILE" ] && [ -f "$INSTALL_DIR/venv/bin/python" ]; then
-        echo -e "\nInstalação concluída! O programa pode ser encontrado no menu de aplicativos do sistema."
+        echo -e "\nInstalação concluída! O programa Bíblia Offline pode ser encontrado no menu de aplicativos do sistema."
         echo "Para executar o programa através da linha de comando, use:"
         echo "$INSTALL_DIR/venv/bin/python $INSTALL_DIR/biblia.py"
     else
