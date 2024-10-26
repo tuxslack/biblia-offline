@@ -49,6 +49,11 @@ Para executar este programa em um sistema Linux, você precisará das seguintes 
 
 4. **`git`**: Permite clonar repositório.
 
+5. **Qt5**: Na maioria das distribuições, o pacote `qt5-base` já vem instalado por padrão. No entanto, em sistemas como Arch Linux, pode ser necessário instalá-lo manualmente. Use o seguinte comando:
+   ```bash
+    sudo pacman -S qt5-base
+   ``` 
+
 ## Instalação
 1. Para instalar a Bíblia Offline faça o download do script de instalação. Para isso, abra o terminal e use o comando:
 ```
