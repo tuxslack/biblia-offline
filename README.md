@@ -40,7 +40,8 @@ Para executar este programa em um sistema Linux, você precisará das seguintes 
     sudo zypper install python3-venv
     ```   
   - Distribuições baseadas no Arch Linux:
-O venv já vem incluso com o pacote Python no Arch Linux, então não é necessário instalar separadamente.
+
+O `venv` já vem incluso com o pacote Python no Arch Linux, então não é necessário instalar separadamente.
 
 1. **`unzip`**: O programa usa do pacote `unzip` para descompactar os livros da Bíblia:
 
