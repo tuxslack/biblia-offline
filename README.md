@@ -41,12 +41,14 @@ Para executar este programa em um sistema Linux, você precisará das seguintes 
     ```   
   - Distribuições baseadas no Arch Linux:
 
-O `venv` já vem incluso com o pacote Python no Arch Linux, então não é necessário instalar separadamente.
+  O `venv` já vem incluso com o pacote Python no Arch Linux, então não é necessário instalar separadamente.
+
 
 1. **`unzip`**: O programa usa do pacote `unzip` para descompactar os livros da Bíblia:
 
    ```bash
    sudo apt install unzip
+
 
 2. **`curl`**: Necessário para fazer download do script de instalação e também para a clonagem do repositório.
 
