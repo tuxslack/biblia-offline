@@ -52,7 +52,7 @@ echo "O módulo venv está disponível. Continuando com a instalação..."
     echo "Verificando se livros.zip existe..."
     if [ -f "livros.zip" ]; then
         echo "Arquivo livros.zip encontrado. Descompactando os livros..."
-        unzip -o livros.zip -d "$INSTALL_DIR/livros"
+        unzip -oq livros.zip -d "$INSTALL_DIR/livros"
 
         # Remover o arquivo compactado
         rm livros.zip
